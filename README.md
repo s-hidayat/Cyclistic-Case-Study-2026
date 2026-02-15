@@ -73,7 +73,7 @@ Berdasarkan data, berikut strategi yang saya usulkan:
 Saya percaya visualisasi berbicara lebih keras daripada tabel angka.
 
 * **📄 Baca Analisis Lengkap (Notebook):** [👉 Klik di sini untuk melihat Kode & Narasi di Kaggle](https://www.kaggle.com/samsurhidayat)
-* **🗺️ Coba Dashboard Interaktif:** [👉 Klik di sini untuk bermain dengan Peta di Tableau]((https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
+* **🗺️ Coba Dashboard Interaktif:** [👉 Klik di sini untuk bermain dengan Peta di Tableau](https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
 
