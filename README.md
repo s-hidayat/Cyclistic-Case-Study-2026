@@ -62,6 +62,6 @@ Berdasarkan bukti data di atas, berikut adalah strategi yang direkomendasikan:
 * **🗺️ Dashboard Interaktif:** [Lihat di Tableau Public](https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
-**Author:** [S. Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
+* **LinkedIn:** [Samsur Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
 
 *Analisis ini dibuat sebagai bagian dari Google Data Analytics Professional Certificate.*
