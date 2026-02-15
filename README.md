@@ -63,4 +63,5 @@ Berdasarkan bukti data di atas, berikut adalah strategi yang direkomendasikan:
 
 ---
 **Author:** [S. Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
+
 *Analisis ini dibuat sebagai bagian dari Google Data Analytics Professional Certificate.*
