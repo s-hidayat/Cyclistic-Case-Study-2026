@@ -80,7 +80,7 @@ Saya percaya visualisasi berbicara lebih keras daripada tabel angka.
 ### 📬 Connect with Me
 Jika Anda tertarik berdiskusi tentang Data Analytics, PropTech, atau Arsitektur:
 
-* **LinkedIn:** [linkedin.com/in/s-hidayat-69b1b5372]
+* **LinkedIn:** linkedin.com/in/s-hidayat-69b1b5372
 
 
 ---
