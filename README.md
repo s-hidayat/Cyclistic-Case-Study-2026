@@ -1,89 +1,66 @@
-# 🚴 Cyclistic Spatial Analysis: Unlocking Weekend Revenue via Urban Mobility Patterns
+
+#  Cyclistic Case Study: Strategi Konversi Pengendara Berbasis Data
 
 ![SQL](https://img.shields.io/badge/SQL-DuckDB-yellow?style=for-the-badge&logo=sql)
 ![R](https://img.shields.io/badge/R-Tidyverse-blue?style=for-the-badge&logo=r)
 ![Tableau](https://img.shields.io/badge/Viz-Tableau_Geospatial-orange?style=for-the-badge&logo=tableau)
 ![Status](https://img.shields.io/badge/Status-Completed-green?style=for-the-badge)
 
-> **"Data bukan sekadar angka di spreadsheet; data adalah jejak digital perilaku manusia di ruang kota."**
+## 📌 Ringkasan Proyek
+Proyek ini bertujuan untuk memecahkan masalah pemasaran utama Cyclistic: **Bagaimana cara mengonversi Pengendara Kasual (*Casual Riders*) menjadi Anggota Tahunan (*Annual Members*)?**
 
----
+Menganalisis lebih dari **5,7 juta data perjalanan** sepanjang tahun 2025, studi ini mengungkap perbedaan perilaku fundamental antara kedua tipe pengguna—mulai dari *kapan* mereka berkendara, *berapa lama* durasinya, hingga *di mana* lokasi favorit mereka.
 
-## 👋 Pengantar: Mengapa Proyek Ini Ada?
-Sebagai seseorang dengan latar belakang **Arsitektur** yang kini menyelami dunia **Data Analytics**, saya selalu tertarik pada bagaimana manusia berinteraksi dengan lingkungan kota mereka.
-
-Studi kasus **Cyclistic Bike-Share** ini menarik perhatian saya bukan hanya karena volume datanya (5,7 juta baris!), tetapi karena ini adalah masalah **Mobilitas Perkotaan (*Urban Mobility*)**.
-
-Tantangannya sederhana namun krusial: Bagaimana mengubah pengguna sepeda yang hanya bersenang-senang di akhir pekan (*Casual Riders*) menjadi pelanggan setia jangka panjang (*Annual Members*)?
-
-## 🏙️ Pendekatan Unik: The Spatial & Human Angle
-Alih-alih hanya membandingkan angka rata-rata, saya mendekati masalah ini dengan kacamata **PropTech**:
-* **Mapping Human Flow:** Saya tidak hanya bertanya "kapan" mereka bersepeda, tapi "di mana" mereka berkumpul. Apakah mereka turis pantai atau pekerja kantoran?
-* **Space vs. Time:** Menganalisis korelasi antara lokasi stasiun (Taman vs. Gedung Tinggi) dengan durasi penggunaan sepeda.
-
-## 💼 Masalah Bisnis (The Business Case)
-Tim pemasaran Cyclistic memiliki data yang jelas:
-1.  **Annual Members** adalah sumber pendapatan yang stabil.
-2.  **Casual Riders** memberikan profit margin tinggi per transaksi, tapi tidak konsisten.
-
-**Tujuan:** Mengidentifikasi pola perilaku *Casual Riders* yang paling potensial untuk dikonversi menjadi *Members*.
-
-## 🛠️ Tech Stack: Mengapa Excel Tidak Cukup?
-Dataset ini berisi **5.719.877 baris data**. Spreadsheet biasa akan *crash*. Oleh karena itu, saya menggunakan pendekatan *Modern Data Stack*:
+## 🛠️ Metodologi & Tech Stack
+Karena volume data mencapai 5,7 juta baris, spreadsheet konvensional tidak lagi efisien. Saya menggunakan pendekatan *Modern Data Stack* berikut:
 
 1.  **SQL (DuckDB via DBeaver):**
-    * Digunakan untuk *Heavy Lifting*. Membersihkan data kotor, memfilter anomali (durasi <1 menit), dan mengekstrak metrik waktu.
-2.  **R (Tidyverse & ggplot2):**
-    * Digunakan untuk analisis statistik mendalam dan validasi hipotesis. R sangat kuat untuk melihat distribusi data yang tidak normal.
+    * Digunakan untuk *Data Cleaning* dan pemrosesan awal.
+    * Memfilter anomali data (durasi < 1 menit atau > 24 jam).
+    * Memastikan presisi data lokasi (Latitude/Longitude) untuk pemetaan.
+2.  **R (Tidyverse):**
+    * Digunakan untuk analisis statistik mendalam dan visualisasi grafik statis.
+    * Memverifikasi logika pembersihan data.
 3.  **Tableau Public:**
-    * Digunakan untuk **Visualisasi Geospasial**. Peta interaktif adalah satu-satunya cara untuk membuktikan hipotesis lokasi (Pantai vs. Kota).
+    * Digunakan untuk visualisasi Geospasial (Peta Sebaran) dan Analisis Temporal (Heatmap).
 
 ## 📈 Temuan Kunci (Key Insights)
 
-### 1. Market Share vs. Potential (Komposisi Pengguna)
-Meskipun **Annual Members mendominasi 64%** total perjalanan, segmen **Casual Riders (36%)** memiliki potensi konversi yang besar karena perilaku penggunaan mereka yang unik dan profit margin yang tinggi per transaksi.
+Berdasarkan analisis data, ditemukan pola perilaku yang sangat kontras:
 
-### 2. The "Weekend Warrior" Phenomenon
-Data berbicara lantang: Pengguna Casual adalah **"Pejuang Akhir Pekan"**.
-* Aktivitas mereka melonjak drastis pada hari **Sabtu & Minggu**.
-* Rata-rata durasi bersepeda mereka **2x lebih lama** dibandingkan Member. Ini bukan perjalanan untuk bekerja; ini adalah perjalanan untuk *menikmati hidup*.
+### 1. Komposisi Pengguna (Market Share)
+Meskipun **Annual Members mendominasi 65%** dari total perjalanan, segmen **Casual Riders (35%)** merupakan pasar potensial yang cukup besar untuk dikonversi.
 
-### 3. Segregasi Spasial (Pemisahan Lokasi)
-Melalui peta panas (*Heatmap*) di Tableau, ditemukan pola yang kontras:
-* 🔴 **Casual Riders:** Sangat terkonsentrasi di **garis pantai (*Coastline*)** dan area wisata terbuka.
-* 🔵 **Annual Members:** Tersebar merata di **pusat bisnis (*Downtown*)** dan jalur komuter, dengan pola penggunaan jam sibuk (08:00 & 17:00).
+### 2. Durasi Berkendara (Duration)
+Pengendara Kasual menghabiskan waktu rata-rata **2x lebih lama** bersepeda dibandingkan Anggota Tahunan. Ini mengindikasikan bahwa Casual Riders menggunakan sepeda untuk tujuan santai/rekreasi, bukan sekadar transportasi cepat.
 
-### 4. Peluang Musiman (Seasonality)
-Musim panas (Juni - Agustus) adalah "Masa Panen". Grafik tren menunjukkan lonjakan masif di bulan-bulan ini, yang berarti kampanye pemasaran harus dimulai sejak bulan Mei (Pre-season).
+### 3. Pola Mingguan (The "Weekend Warrior")
+* **Casual Riders:** Aktivitas melonjak drastis pada akhir pekan (**Sabtu & Minggu**).
+* **Annual Members:** Mendominasi penggunaan pada hari kerja (Senin-Jumat), memperkuat dugaan penggunaan untuk komuter kerja.
 
----
+### 4. Segregasi Lokasi & Waktu (Map & Heatmap)
+* **Lokasi:** Peta panas (*Heatmap*) menunjukkan Pengendara Kasual terkonsentrasi di area **wisata dan pesisir pantai**. Sebaliknya, Member tersebar di pusat bisnis.
+* **Musiman:** Lonjakan tertinggi terjadi pada **Musim Panas (Juni - Agustus)**.
 
-## 💡 Rekomendasi Strategis (Action Plan)
-Berdasarkan data, berikut strategi yang saya usulkan:
+## 💡 Rekomendasi Bisnis (Action Plan)
+Berdasarkan bukti data di atas, berikut adalah strategi yang direkomendasikan:
 
-1.  **📍 Lokasi Adalah Kunci (Geo-Targeting):**
-    Berhenti beriklan di pusat kota untuk target Casual. Pasang iklan fisik (QR Code) di stasiun docking sepanjang **jalur pantai dan taman kota**.
+1.  **Strategi Lokasi (Coastal Dominance):**
+    Prioritaskan pemasangan iklan fisik (Billboards/QR Code) di stasiun docking sepanjang **jalur pantai**. Gunakan pesan kampanye bernuansa *"Liburan Tanpa Batas"* untuk memikat segmen rekreasi ini.
 
-2.  **🎟️ Produk Baru: "Summer Weekend Pass":**
-    Ciptakan keanggotaan hybrid. Pengguna Casual suka bersepeda lama di akhir pekan musim panas. Berikan mereka paket khusus yang mengakomodasi perilaku ini, sebagai langkah awal masuk ke ekosistem membership.
+2.  **Produk Baru ("Summer Weekend Pass"):**
+    Karena Casual Riders aktif di akhir pekan musim panas, luncurkan paket keanggotaan khusus (misal: *Weekend-Only Membership*). Ini memberikan opsi yang lebih relevan bagi mereka dibanding keanggotaan penuh tahunan.
 
-3.  **gamifikasi Durasi:**
-    Karena Casual Riders suka bersepeda lama (>40 menit), buat tantangan *"Mile Hunter"*. Berikan insentif diskon membership jika mereka mencapai jarak tempuh tertentu.
+3.  **Gamifikasi Durasi:**
+    Manfaatkan kebiasaan durasi panjang Casual Riders. Buat tantangan di aplikasi (misal: *"Gowes 10 Jam Bulan Ini"*) dengan hadiah diskon *upgrade* ke Annual Member bagi mereka yang mencapainya.
 
 ---
 
-## 📊 Lihat Hasil Analisis
-Saya percaya visualisasi berbicara lebih keras daripada tabel angka.
+## 🔗 Lihat Analisis Lengkap
 
-* **📄 Baca Analisis Lengkap (Notebook):** [👉 Klik di sini untuk melihat Kode & Narasi di Kaggle](https://www.kaggle.com/samsurhidayat)
-* **🗺️ Coba Dashboard Interaktif:** [👉 Klik di sini untuk bermain dengan Peta di Tableau](https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
----
-
-### 📬 Connect with Me
-Jika Anda tertarik berdiskusi tentang Data Analytics, PropTech, atau Arsitektur:
-
-* **LinkedIn:** [S. Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
+* **📄 Notebook (Kode & Narasi):** [Lihat di Kaggle](https://www.kaggle.com/samsurhidayat)
+* **🗺️ Dashboard Interaktif:** [Lihat di Tableau Public](https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 ---
+**Author:** [S. Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
 *Analisis ini dibuat sebagai bagian dari Google Data Analytics Professional Certificate.*
