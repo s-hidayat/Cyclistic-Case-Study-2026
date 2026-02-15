@@ -40,17 +40,20 @@ Dataset ini berisi **5.719.877 baris data**. Spreadsheet biasa akan *crash*. Ole
 
 ## 📈 Temuan Kunci (Key Insights)
 
-### 1. The "Weekend Warrior" Phenomenon
+### 1. Market Share vs. Potential (Komposisi Pengguna)
+Meskipun **Annual Members mendominasi 64%** total perjalanan, segmen **Casual Riders (36%)** memiliki potensi konversi yang besar karena perilaku penggunaan mereka yang unik dan profit margin yang tinggi per transaksi.
+
+### 2. The "Weekend Warrior" Phenomenon
 Data berbicara lantang: Pengguna Casual adalah **"Pejuang Akhir Pekan"**.
 * Aktivitas mereka melonjak drastis pada hari **Sabtu & Minggu**.
 * Rata-rata durasi bersepeda mereka **2x lebih lama** dibandingkan Member. Ini bukan perjalanan untuk bekerja; ini adalah perjalanan untuk *menikmati hidup*.
 
-### 2. Segregasi Spasial (Pemisahan Lokasi)
+### 3. Segregasi Spasial (Pemisahan Lokasi)
 Melalui peta panas (*Heatmap*) di Tableau, ditemukan pola yang kontras:
-* 🔴 **Casual Riders:** Sangat terkonsentrasi di **garis pantai (*Coastline*)** dan area wisata terbuka seperti Navy Pier.
+* 🔴 **Casual Riders:** Sangat terkonsentrasi di **garis pantai (*Coastline*)** dan area wisata terbuka.
 * 🔵 **Annual Members:** Tersebar merata di **pusat bisnis (*Downtown*)** dan jalur komuter, dengan pola penggunaan jam sibuk (08:00 & 17:00).
 
-### 3. Peluang Musiman (Seasonality)
+### 4. Peluang Musiman (Seasonality)
 Musim panas (Juni - Agustus) adalah "Masa Panen". Grafik tren menunjukkan lonjakan masif di bulan-bulan ini, yang berarti kampanye pemasaran harus dimulai sejak bulan Mei (Pre-season).
 
 ---
