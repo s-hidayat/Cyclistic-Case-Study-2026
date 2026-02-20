@@ -55,13 +55,6 @@ Berdasarkan bukti data di atas, berikut adalah strategi yang direkomendasikan:
     Manfaatkan kebiasaan durasi panjang Casual Riders. Buat tantangan di aplikasi (misal: *"Gowes 10 Jam Bulan Ini"*) dengan hadiah diskon *upgrade* ke Annual Member bagi mereka yang mencapainya.
 
 ---
-
-## 🔗 Lihat Analisis Lengkap
-
-* **📄 Notebook (Kode & Narasi):** [Lihat di Kaggle](https://www.kaggle.com/samsurhidayat)
-* **🗺️ Dashboard Interaktif:** [Lihat di Tableau Public](https://public.tableau.com/views/All_trip_sepeda/Dashboard1?:language=en-US&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
-
----
 * **LinkedIn:** [S. Hidayat](https://www.linkedin.com/in/s-hidayat-69b1b5372)
 
 *Analisis ini dibuat sebagai bagian dari Google Data Analytics Professional Certificate.*
